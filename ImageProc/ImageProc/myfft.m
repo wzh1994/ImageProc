@@ -1,0 +1,14 @@
+clear;clc;
+Lena=rgb2gray(imread('lena.jpg'));
+LenaS=Lena(21:256,51:256)
+LenaE=[zeros(10,256);zeros(236,25),Lena(21:256,51:256),zeros(236,25);zeros(10,256)];
+subplot(2,2,1);
+imshow(LenaS);
+LFFT=fftshift(fft2(double(LenaS)));
+subplot(2,2,2);
+imshow(log(abs(LFFT)+1),[]);
+subplot(2,2,3);
+imshow(LenaE);
+LFFT=fftshift(fft2(double(LenaE)));
+subplot(2,2,4);
+imshow(log(abs(LFFT)+1),[]);

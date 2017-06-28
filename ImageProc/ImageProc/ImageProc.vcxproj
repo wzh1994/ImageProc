@@ -156,8 +156,15 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Homework2.cpp" />
+    <ClCompile Include="Homework3.cpp" />
+    <ClCompile Include="Homework4.cpp" />
+    <ClCompile Include="Homework5.cpp" />
+    <ClCompile Include="Homework6.cpp" />
     <ClCompile Include="imageproc.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Homework1.cpp" />
+    <ClCompile Include="TestFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="imageproc.h">
@@ -200,7 +207,9 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="funcs.hpp" />
     <ClInclude Include="GeneratedFiles\ui_imageproc.h" />
+    <ClInclude Include="head.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="imageproc.qrc">
@@ -221,6 +230,10 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="debug.txt" />
+    <Text Include="Huffman_result.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
